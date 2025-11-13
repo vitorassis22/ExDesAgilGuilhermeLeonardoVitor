@@ -1,0 +1,97 @@
+:root {
+    --bg1: #0f172a;
+    --bg2: #0b3a66;
+    --accent: #7dd3fc;
+    --glass: rgba(255, 255, 255, 0.06);
+    --radius: 16px;
+    --maxw: 720px;
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background: linear-gradient(135deg, var(--bg1), var(--bg2));
+    color: #e6f6ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+}
+
+.card {
+    width: 100%;
+    max-width: var(--maxw);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+    border-radius: var(--radius);
+    padding: 28px;
+    box-shadow: 0 8px 30px rgba(2, 6, 23, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(6px);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    width: 56px;
+    height: 56px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--accent), rgba(125, 211, 252, 0.25));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #012238;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.45rem;
+    line-height: 1.05;
+}
+
+p.lead {
+    margin: 18px 0 12px;
+    color: rgba(230, 246, 255, 0.95);
+    font-weight: 500;
+}
+
+.team {
+    margin-top: 10px;
+    background: var(--glass);
+    padding-left: 14px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.team ul {
+    margin: 0;
+    padding-left: 1.15rem;
+}
+
+.team li {
+    margin: 8px 0;
+}
+
+@media (max-width: 420px) {
+    body {
+        padding: 18px;
+    }
+    .card {
+        padding: 18px;
+    }
+}
